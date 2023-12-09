@@ -1,38 +1,44 @@
  // HTML elementlerini seç
  const veriSection = document.querySelector('.veri-section');
- const profilSection = document.querySelector('.profil-section');
  const yukleSection = document.querySelector('.yukle-section');
+ const duyuruSection = document.querySelector('.duyuru-ekle-section');
+
 
  // İlk başta veri-section görüntülensin
  veriSection.style.display = 'block';
- profilSection.style.display = 'none';
  yukleSection.style.display = 'none';
+ duyuruSection.style.display = 'none';
+
 
  // Navbar elementlerini seç
  const veriLink = document.querySelector('.nav-list li:nth-child(2) a');
- const profilLink = document.querySelector('.nav-list li:nth-child(3) a');
- const yukleLink = document.querySelector('.nav-list li:nth-child(4) a');
+ const yukleLink = document.querySelector('.nav-list li:nth-child(3) a');
+ const duyuruLink = document.querySelector('.nav-list li:nth-child(4) a');
+
+
 
  // Veri linkine tıklanınca sadece veri-section gösterilsin
  veriLink.addEventListener('click', function() {
    veriSection.style.display = 'block';
-   profilSection.style.display = 'none';
    yukleSection.style.display = 'none';
+   duyuruSection.style.display = 'none';
  });
 
- // Profil linkine tıklanınca sadece profil-section gösterilsin
- profilLink.addEventListener('click', function() {
-   veriSection.style.display = 'none';
-   profilSection.style.display = 'block';
-   yukleSection.style.display = 'none';
- });
+
 
  // Ürün Yükleme linkine tıklanınca sadece yukle-section gösterilsin
  yukleLink.addEventListener('click', function() {
    veriSection.style.display = 'none';
-   profilSection.style.display = 'none';
    yukleSection.style.display = 'block';
+   duyuruSection.style.display = 'none';
  });
+
+ // Duyuru Ekleme linkine tıklanınca sadece yukle-section gösterilsin
+ duyuruLink.addEventListener('click', function() {
+  veriSection.style.display = 'none';
+  yukleSection.style.display = 'none';
+  duyuruSection.style.display = 'block';
+});
 
  window.addEventListener("DOMContentLoaded",() => {
 	const upload = new UploadModal("#upload");
@@ -211,12 +217,12 @@ function menuBtnChange() {
 new Chart(document.getElementById("doughnut-chart"), {
   type: "doughnut",
   data: {
-    labels: ["Vitaminler", "Mineraller", "Balık Yağları"],
+    labels: ["C", "E", "B12", "K", "Multivitamin", "Omega3", "Demir", "Çinko", "Magnezyum"],
     datasets: [
       {
         label: "Population (millions)",
-        backgroundColor: ["#0079FF", "#FF0060", "#F6FA70"],
-        data: [2478, 5267, 1733],
+        backgroundColor: ["#0079FF", "#FF0060", "#F6FA70", "#172663", "#00e699", "#00d6cb", "#83A2FF", "#FF6C22", "#B931FC"],
+        data: [2478, 5267, 1733, 2130, 3540, 1526, 4000, 4712, 3090],
       },
     ],
   },

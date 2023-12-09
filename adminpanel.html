@@ -13,7 +13,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <div class="logo_name">VİT & MİN</div>
+      <a href="index.html" class="logo_name">VİT & MİN</a>
       <i class='bx bx-menu' id="btn"></i>
     </div>
     <ul class="nav-list">
@@ -30,16 +30,18 @@
         <span class="tooltip">Veriler</span>
       </li>
       <li>
-        <a href="">
-        </a>
-        <span class="tooltip">Profil</span>
-      </li>
-      <li>
         <a href="#">
           <i class='bx bx-upload'></i>
           <span class="links_name">Ürün Yükleme</span>
         </a>
         <span class="tooltip">Ürün Yükleme</span>
+      </li>
+      <li id="duyuruEkle">
+        <a href="#">
+          <i class='bx bx-bell'></i>
+          <span class="links_name">Duyuru Ekle</span>
+        </a>
+        <span class="tooltip">Duyuru Ekle</span>
       </li>
     </ul>
   </div>
@@ -61,11 +63,7 @@
       </div>
     </div>
   </section>
-
-  <section class="profil-section">
-    
-  </section>
-
+  
   <section class="yukle-section">
     <div class="modal__content" style="margin-top: 50px;">
 
@@ -194,7 +192,29 @@
       </div>
   </section>
 
+  <section class="duyuru-ekle-section">
+    <div class="modal__content">
+      <h1 style="text-align: center;">Duyuru Ekle</h1><br><br>
+      <fieldset  class="modal__form-group2">
+        <label for="announcementTitle">Duyuru Başlığı:</label>
+        <input type="text" id="announcementTitle" class="modal__input" placeholder="Duyuru Başlığı Gir" required>
+      </fieldset><br>
+       
+      <fieldset class="modal__form-group2">
+        <label for="announcementDescription">Duyuru Açıklaması:</label>
+        <textarea id="announcementDescription" class="modal__input" placeholder="Duyuru Açıklaması Gir" required></textarea>
+      </fieldset><br>
+        
+      <fieldset  class="modal__form-group2">
+        <label for="announcementDate">Duyuru Tarihi:</label>
+        <input type="date" id="announcementDate" class="modal__input" required>
+      </fieldset><br>
+        
 
+        <button class="modal__button" type="button" data-action="addAnnouncement">Ekle</button>
+    </div>
+  </section>
+  
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>

@@ -345,6 +345,14 @@ body {
 	box-sizing   : border-box;
 }
 
+.modal__form-group2 {
+	background   : linear-gradient(45deg, #1d253b, #17181c);
+	padding      : 8px;
+	color        : #ffffff;
+	border       : 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing   : border-box;
+}
 
 .modal:before {
 	background-color: hsl(223, 90%, 60%);
