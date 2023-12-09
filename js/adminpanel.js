@@ -288,18 +288,21 @@ new Chart(document.getElementById("line-chart"), {
 new Chart(document.getElementById("bar-chart"), {
   type: "bar",
   data: {
-    labels: ["İstanbul", "Ankara", "Zonguldak", "Mersin", "Çanakkale"],
+    labels: ["İstanbul", "Ankara", "Zonguldak", "Mersin", "Çanakkale", "Muğla", "Eskişehir", "Konya"],
     datasets: [
       {
-        label: "2023 En çok sipariş veren 5 şehir",
+        label: "2023 En çok sipariş veren 8 şehir",
         backgroundColor: [
           "#293462",
           "#1CD6CE",
           "#FEDB39",
           "#D61C4E",
           "#00FFAB",
+          "#B931FC",
+          "#FF6C22",
+          "#83A2FF",
         ],
-        data: [488, 399, 457, 444, 510],
+        data: [488, 399, 457, 444, 510, 418, 500, 350],
       },
     ],
   },
