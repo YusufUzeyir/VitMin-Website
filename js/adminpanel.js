@@ -2,18 +2,22 @@
  const veriSection = document.querySelector('.veri-section');
  const yukleSection = document.querySelector('.yukle-section');
  const duyuruSection = document.querySelector('.duyuru-ekle-section');
+ const profilSection = document.querySelector('.profil-section');
+
 
 
  // İlk başta veri-section görüntülensin
  veriSection.style.display = 'block';
  yukleSection.style.display = 'none';
  duyuruSection.style.display = 'none';
+ profilSection.style.display = 'none';
 
 
  // Navbar elementlerini seç
  const veriLink = document.querySelector('.nav-list li:nth-child(2) a');
  const yukleLink = document.querySelector('.nav-list li:nth-child(3) a');
  const duyuruLink = document.querySelector('.nav-list li:nth-child(4) a');
+ const profilLink = document.querySelector('.nav-list li:nth-child(5) a');
 
 
 
@@ -22,6 +26,7 @@
    veriSection.style.display = 'block';
    yukleSection.style.display = 'none';
    duyuruSection.style.display = 'none';
+   profilSection.style.display = 'none';
  });
 
 
@@ -31,13 +36,23 @@
    veriSection.style.display = 'none';
    yukleSection.style.display = 'block';
    duyuruSection.style.display = 'none';
+   profilSection.style.display = 'none';
  });
 
- // Duyuru Ekleme linkine tıklanınca sadece yukle-section gösterilsin
+ // Duyuru Ekleme linkine tıklanınca sadece duyuru-section gösterilsin
  duyuruLink.addEventListener('click', function() {
   veriSection.style.display = 'none';
   yukleSection.style.display = 'none';
   duyuruSection.style.display = 'block';
+  profilSection.style.display = 'none';
+});
+
+// Profil linkine tıklanınca sadece profil-section gösterilsin
+profilLink.addEventListener('click', function() {
+  veriSection.style.display = 'none';
+  yukleSection.style.display = 'none';
+  duyuruSection.style.display = 'none';
+  profilSection.style.display = 'block';
 });
 
  window.addEventListener("DOMContentLoaded",() => {
